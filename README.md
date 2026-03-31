@@ -11,7 +11,7 @@ CSS (Cascading Style Sheets) adalah bahasa style sheet yang digunakan untuk meng
 Bootstrap 5 adalah framework CSS, HTML, dan JavaScript open-source terpopuler untuk pengembangan front-end yang responsif dan mobile-first. Dirilis tahun 2021, versi ini menghapus ketergantungan pada jQuery, beralih ke vanilla JavaScript, serta menghapus dukungan IE11, menjadikannya lebih cepat dan ringan dengan fitur modern seperti dark mode dan sistem grid yang lebih fleksibel.
 
 ## D. PHP
-
+PHP (Hypertext Preprocessor) adalah bahasa pemrograman server-side yang digunakan untuk mengembangkan website dinamis dan interaktif. PHP bekerja di sisi server untuk memproses logika aplikasi, mengambil data dari database, serta menghasilkan halaman HTML yang ditampilkan ke pengguna. Dalam pengembangan web, PHP sering digunakan bersama MySQL untuk membuat sistem yang datanya dapat berubah secara otomatis, seperti profil, daftar project, achievement, dan certificates. Pada website portofolio ini, PHP berperan penting dalam menghubungkan halaman dengan database sehingga seluruh konten dapat ditampilkan secara dinamis tanpa harus ditulis manual di dalam kode HTML.
 
 # 2. Tampilan Section/Fitur
 ## A. Home
@@ -31,7 +31,7 @@ Bootstrap 5 adalah framework CSS, HTML, dan JavaScript open-source terpopuler un
 
 
 # 3. Penjelasan Kode Section/Fitur
-# 3.1 Bagian HTML
+# 3.1 Bagian Index.PHP
 ## A. Koneksi PHP
 <img width="381" height="61" alt="image" src="https://github.com/user-attachments/assets/237b3cf1-893c-4ada-a813-5e1d93a44045" />
 
@@ -398,3 +398,10 @@ while ($c = mysqli_fetch_assoc($cert)) {
 - (@media (max-width: 768px) { #about p { text-align: left; } })
 
   Kode ini mengubah perataan teks paragraf di section About Me dari justify menjadi left saat layar kecil. Hal ini dilakukan agar teks lebih mudah dibaca pada perangkat dengan lebar sempit, karena justify pada layar kecil sering membuat jarak antar kata tidak merata dan terlihat kurang rapi.
+
+# 3.3 Koneksi.PHP
+<img width="542" height="139" alt="image" src="https://github.com/user-attachments/assets/a5c12812-be0f-4dbe-9572-aa113887620d" />
+
+Kode ini berfungsi untuk menghubungkan website dengan database MySQL agar data pada halaman portofolio dapat diambil secara dinamis. 
+- Pada bagian mysqli_connect("localhost", "root", "", "porto"), sistem melakukan koneksi ke database dengan menggunakan server localhost, username root, password kosong, dan nama database porto. Hasil koneksi tersebut disimpan ke dalam variabel $conn, sehingga dapat digunakan kembali pada file lain untuk menjalankan query seperti mengambil data profile, project, skills, achievement, dan certificates.
+- Selanjutnya, bagian if (!$conn) digunakan untuk memeriksa apakah koneksi berhasil atau tidak. Jika koneksi gagal, maka fungsi die() akan menghentikan proses program sekaligus menampilkan pesan error melalui mysqli_connect_error(), sehingga memudahkan dalam mengetahui penyebab masalah koneksi database.

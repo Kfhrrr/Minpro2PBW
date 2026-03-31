@@ -1,4 +1,4 @@
-# Minpro2PBW
+# Minpro2-PBW
 
 # 1. Teknologi Yang Digunakan
 ## A. HTML
@@ -10,30 +10,42 @@ CSS (Cascading Style Sheets) adalah bahasa style sheet yang digunakan untuk meng
 ## C. BOOSTRAP5
 Bootstrap 5 adalah framework CSS, HTML, dan JavaScript open-source terpopuler untuk pengembangan front-end yang responsif dan mobile-first. Dirilis tahun 2021, versi ini menghapus ketergantungan pada jQuery, beralih ke vanilla JavaScript, serta menghapus dukungan IE11, menjadikannya lebih cepat dan ringan dengan fitur modern seperti dark mode dan sistem grid yang lebih fleksibel.
 
+## D. PHP
+
+
 # 2. Tampilan Section/Fitur
 ## A. Home
-<img width="1348" height="990" alt="image" src="https://github.com/user-attachments/assets/0fd484b4-757a-4fdd-84b6-683153bf9cc8" />
+<img width="1489" height="1020" alt="image" src="https://github.com/user-attachments/assets/fbdcc86d-8977-448c-addc-df441102ab6f" />
+
 
 ## B. About Me
-<img width="1346" height="990" alt="image" src="https://github.com/user-attachments/assets/0de38481-a2ee-4e4c-87b0-f09356f91c3d" />
+<img width="1488" height="1019" alt="image" src="https://github.com/user-attachments/assets/e5b5d12e-7e42-45d3-97b5-3ecd87627ccb" />
+
 
 ## C. Achievment
-<img width="1345" height="745" alt="image" src="https://github.com/user-attachments/assets/0783248a-9a77-48c5-a447-f170ac3c7061" />
+<img width="1489" height="730" alt="image" src="https://github.com/user-attachments/assets/4bd43e78-cbbf-487d-b011-845f69d60be0" />
+
 
 ## D. Certicate
-<img width="1348" height="990" alt="image" src="https://github.com/user-attachments/assets/b44db324-baa6-4466-929f-ba5f431ecc84" />
+<img width="1487" height="1018" alt="image" src="https://github.com/user-attachments/assets/0bfb25ce-8650-4048-9fd1-e501a8198c05" />
+
 
 # 3. Penjelasan Kode Section/Fitur
 # 3.1 Bagian HTML
-## A. Doctype html 
-<img width="275" height="58" alt="image" src="https://github.com/user-attachments/assets/7e2bad6b-42e1-4590-8a56-b1a4eba76394" />
+## A. Koneksi PHP
+<img width="381" height="61" alt="image" src="https://github.com/user-attachments/assets/237b3cf1-893c-4ada-a813-5e1d93a44045" />
+
+
+## B. Doctype html 
+<img width="286" height="69" alt="image" src="https://github.com/user-attachments/assets/251e623d-1c71-491c-b8b2-f71a386cebaf" />
 
 
 (!DOCTYPE html) berfungsi untuk memberi tahu browser bahwa dokumen menggunakan standar HTML5 sehingga ditampilkan dengan benar dan 
 (html lang="id") berfungsi sebagai elemen utama pembungkus seluruh halaman HTML sekaligus menentukan bahasa utama halaman yaitu Bahasa Indonesia.
 
-## B. Bagian Head
-<img width="760" height="200" alt="image" src="https://github.com/user-attachments/assets/5a225e27-c7fd-4f60-9165-eb16e2cfe078" />
+## C. Bagian Head
+<img width="910" height="204" alt="image" src="https://github.com/user-attachments/assets/0448a430-1b73-40b5-a559-ed89dea5dee8" />
+
 
 - (head)
 
@@ -54,8 +66,9 @@ Bootstrap 5 adalah framework CSS, HTML, dan JavaScript open-source terpopuler un
 
   berfungsi untuk menghubungkan file CSS eksternal yang berisi styling tambahan sesuai desain yang dibuat.
 
-## C. Navbar
-<img width="744" height="351" alt="image" src="https://github.com/user-attachments/assets/f23ae5a5-6613-4a8c-bfa5-da440ca2bb04" />
+## D. Navbar
+<img width="892" height="443" alt="image" src="https://github.com/user-attachments/assets/4b6ab678-3e5a-410f-a585-5c36dfd411cb" />
+
 
 Navbar berfungsi sebagai menu navigasi utama pada halaman portofolio. Desainnya sticky-top sehingga tetap terlihat saat pengguna scroll, dengan tampilan modern berwarna gelap dan link ke setiap section utama seperti Home, About Me, Achievement, dan Certificates.
 
@@ -81,8 +94,8 @@ Navbar berfungsi sebagai menu navigasi utama pada halaman portofolio. Desainnya 
 
    berfungsi sebagai link navigasi yang akan mengarahkan pengguna ke section tertentu di dalam halaman (Home, About Me, Achievement, Certificates) melalui sistem anchor scroll.
 
-## D. Hero
-<img width="764" height="464" alt="image" src="https://github.com/user-attachments/assets/64c4bc71-aacf-4d3a-b0d9-c6378883bc4b" />
+## E. Hero
+<img width="659" height="456" alt="image" src="https://github.com/user-attachments/assets/a10aff8d-2066-4f77-99dc-4700af2a5555" />
 
 Hero berisi perkenalan singkat, headline utama, deskripsi, dan gambar atau ilustrasi pendukung. Fungsinya untuk menarik perhatian pengunjung dan memberikan gambaran singkat tentang siapa pemilik website atau isi utama website tersebut.
 
@@ -113,9 +126,12 @@ Hero berisi perkenalan singkat, headline utama, deskripsi, dan gambar atau ilust
 - (img src="fotofhr (1).png" class="img-fluid hero-img" alt="Mahasiswa")
 
   berfungsi menampilkan gambar profil. Class img-fluid membuat gambar responsif mengikuti ukuran layar, sedangkan hero-img digunakan untuk styling tambahan seperti border radius dan shadow di CSS.
+- ?php $profile = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM profile LIMIT 1")); ?
 
-## E. About me
-<img width="674" height="671" alt="image" src="https://github.com/user-attachments/assets/65b22905-0f3d-4851-a7b0-1087a5033198" />
+  berfungsi untuk menjalankan query ke tabel profile, mengambil 1 data pertama, lalu mengubah hasil query menjadi array associative agar bisa dipanggil menggunakan nama kolom seperti nama, deskripsi, dan foto.
+
+## F. About me
+<img width="785" height="720" alt="image" src="https://github.com/user-attachments/assets/e4e4ae47-5d68-478a-a69f-bf963cf2b22b" />
 
 Section About Me menampilkan deskripsi diri secara lebih detail, daftar project yang pernah dikerjakan, dan skill yang digambarkan melalui progress bar. Layout dua kolom membuat teks dan visual tetap rapi, dan progress bar memberikan representasi visual kemampuan dalam bidang teknologi informasi, desain jaringan, dan pemrograman berbasis objek.
 
@@ -150,9 +166,24 @@ Section About Me menampilkan deskripsi diri secara lebih detail, daftar project 
 - (p), (div class="progress"), dan (div class="progress-bar")
 
   (p) untuk menampilkan nama skill, lalu (div class="progress") dan (div class="progress-bar") digunakan untuk membuat progress bar dari Bootstrap. Properti style="width:74%", 78%, dan 60% menunjukkan tingkat pemahaman atau penguasaan pada masing-masing bidang, yaitu Sistem Basis Data, Desain Jaringan Komputer, dan Pemrograman Berbasis Objek.
+- ?php $about = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM about LIMIT 1")); ?
+
+  berfungsi untuk mengambil 1 data isi about dari tabel about, kemudian hasilnya disimpan ke variabel $about agar dapat dipanggil pada bagian (?= $about['isi']; ?)
   
-## F. Achievment
-<img width="736" height="318" alt="image" src="https://github.com/user-attachments/assets/4d60b578-5d96-4ad4-9707-24fdc5a4bad2" />
+- (?php $project = mysqli_query($conn, "SELECT * FROM project"); while ($p = mysqli_fetch_assoc($project)) {echo "(li){$p['nama_project']}</li>";}
+?)
+
+  berfungsi untuk menjalankan query ke tabel project guna mengambil seluruh data project, kemudian dilakukan perulangan menggunakan while agar setiap baris data project dibaca satu per satu dan disimpan ke variabel $p, lalu ditampilkan otomatis dalam elemen list (li) sesuai jumlah data yang ada pada database.
+  
+- (?php
+$skills = mysqli_query($conn, "SELECT * FROM skills");
+while ($s = mysqli_fetch_assoc($skills)) {)
+
+  berfungsi untuk menjalankan query ke tabel skills guna mengambil seluruh data skill, kemudian dilakukan perulangan menggunakan while agar setiap baris data dibaca satu per satu dan disimpan ke variabel $s, sehingga nama skill dan nilai persentasenya dapat ditampilkan otomatis sesuai jumlah data pada database.
+  
+## G. Achievment
+<img width="512" height="412" alt="image" src="https://github.com/user-attachments/assets/7da35ccb-cb6b-4fd7-9684-207185865a88" />
+
 
 Achievement menampilkan pencapaian penting seperti Beasiswa Bakti BCA dalam kotak dekoratif (.achievement-box) dengan sudut membulat, bayangan, dan efek hover interaktif. Efek ini membuat kotak terlihat menonjol dan menarik perhatian pengunjung saat mouse berada di atasnya.
 
@@ -184,9 +215,15 @@ Achievement menampilkan pencapaian penting seperti Beasiswa Bakti BCA dalam kota
 - (small)
 
   berisi deskripsi singkat tentang award tersebut, menjelaskan bahwa beasiswa diberikan setelah melalui proses seleksi oleh pihak Bank BCA.
+- ?php
+$ach = mysqli_query($conn, "SELECT * FROM achievement");
+while ($a = mysqli_fetch_assoc($ach)) {?
 
-## G. Certificate
-<img width="434" height="586" alt="image" src="https://github.com/user-attachments/assets/a78a902f-f415-4a91-96b8-1e68c1fb1aba" />
+  berfungsi untuk menjalankan query ke tabel achievement guna mengambil seluruh data pencapaian, kemudian dilakukan perulangan menggunakan while agar setiap data achievement dibaca satu per satu dan disimpan ke variabel $a, sehingga semua pencapaian dapat tampil otomatis sesuai jumlah data pada database.
+
+## H. Certificate
+<img width="602" height="487" alt="image" src="https://github.com/user-attachments/assets/ba7d6ed2-caef-47da-8356-67da7eb40c18" />
+
 
 Certificates menampilkan daftar sertifikat dalam bentuk kartu dengan gambar dan judul. Setiap kartu menggunakan efek hover untuk memperbesar gambar dan mengangkat kartu sedikit, memberi kesan interaktif dan modern. Layout responsif memastikan kartu tetap rapi pada berbagai ukuran layar.
 
@@ -215,7 +252,13 @@ Certificates menampilkan daftar sertifikat dalam bentuk kartu dengan gambar dan 
   adalah bagian isi card yang berisi teks dan dibuat rata tengah.
 - (h5)
   menampilkan nama sertifikat, seperti Edukasi Literasi Keuangan by BCA, Kepengurusan INFORSA 2025, dan Sekolah Pasar Modal by IDX.
-  
+- ?php
+$cert = mysqli_query($conn, "SELECT * FROM certificates");
+while ($c = mysqli_fetch_assoc($cert)) {
+?
+
+  berfungsi untuk menjalankan query ke tabel certificates guna mengambil seluruh data sertifikat, kemudian dilakukan perulangan menggunakan while agar setiap data sertifikat dibaca satu per satu dan disimpan ke variabel $c, sehingga gambar dan nama sertifikat dapat tampil otomatis sesuai jumlah data pada database.
+ 
 # 3.2 Bagian CSS
 ## A. CSS Dasar
 <img width="275" height="251" alt="image" src="https://github.com/user-attachments/assets/1f6bb8e7-e1e4-4cde-8e05-94250d65c70a" />
